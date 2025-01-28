@@ -10,20 +10,15 @@ const IMC_STATUS_DICT= {/*DICIONARIO*/
 
 
 function getClassificationDetail(classification){
+   
+    return{
+        [IMC_STATUS_DICT. UNDERWEIGTH]:'Abaixo do peso',
+        [IMC_STATUS_DICT.REGULAR]:'Peso normal',
+        [IMC_STATUS_DICT.OUVERWEIGHT]:'Abaixo do peso',
+        [IMC_STATUS_DICT.OBESITY]:'Gordo'
+        
+    }[classification]
 
-      switch (classification){
-      case IMC_STATUS_DICT.UNDERWEIGTH:
-        return'Abaixo do peso';
-      case IMC_STATUS_DICT.REGULAR:
-           return'Peso normal';
-      case IMC_STATUS_DICT.OUVERWEIGHT:
-          return'Abaixo do peso';
-      case IMC_STATUS_DICT.OBESITY:
-          return'Gordo';
-      
-       default:
-        return 'Falha ao classificar o IMC';
-}
 }
 
 function classificationIMC(imc){/*Estrutura condicional*/ 
